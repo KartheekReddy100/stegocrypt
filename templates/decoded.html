@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoded Message - Image Steganography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            background-color: #ffffff;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="file"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 24px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .message {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            word-wrap: break-word;
+        }
+
+        button{background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+        button:hover{ background-color: #218838;}
+
+        img{max-width: 400px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Decoded Message</h1>
+        <div class="message">{{ message }}</div>
+        <h2>Decrypted Image</h2>
+    <a href="{{ file_url }}" ><button>Download Decrypted Image</button></a>
+       
+    </div><br><br>
+    <img src="{{ file_url }}" alt="Decrypted Image">  
+</body>
+</html>
